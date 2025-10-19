@@ -19,3 +19,8 @@ function toggleDisplay(eleId){
 function displayAlert(message){
     alert(`display-alert: ${message}`);
 }
+
+// trivial change
+function returnSelf(self){
+    return self;
+}

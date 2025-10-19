@@ -14,3 +14,8 @@ function toggleDisplay(eleId){
         document.getElementById(eleId).style.display = updatedDisplay;
     }
 }
+
+// trivial change
+function displayAlert(message){
+    alert(message);
+}

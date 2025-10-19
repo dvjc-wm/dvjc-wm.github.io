@@ -21,6 +21,6 @@ function displayAlert(message){
 }
 
 // trivial change
-function returnSelf(self){
-    return self;
+function returnDoubleSelf(self){
+    return `${self}-${self}`;
 }

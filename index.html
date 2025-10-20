@@ -28,6 +28,58 @@
                     </div>
                     <div style="display: inline-block; position: relative; width: 25%;">
                         Commands
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Command</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Movement</td>
+                                    <td>
+                                        <input type="button" value="ROTATE LEFT" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Movement</td>
+                                    <td>
+                                        <input type="button" value="ROTATE RIGHT" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Movement</td>
+                                    <td>
+                                        <input type="button" value="MOVE FORWARD" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Control</td>
+                                    <td>
+                                        <input type="button" value="Repeat X times" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Control</td>
+                                    <td>
+                                        <input type="button" value="IF" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Control</td>
+                                    <td>
+                                        <input type="button" value="ELSE" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sensing</td>
+                                    <td>
+                                        <input type="button" value="DETECT WALL" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -99,24 +151,24 @@
             <div id="versionInfo" class="mzTab" style="display: none;">
                 <br />
                 <div style="border-bottom: 1px solid black; width: 75%;">Version Info</div>
-                <table>
+                <table style="position: relative; width: 100%;">
                     <thead>
                         <tr>
-                            <th>Version</th>
-                            <th>Date</th>
-                            <th>Detail(s)</th>
+                            <th class="versionInfoC1-header">Version</th>
+                            <th class="versionInfoC2">Date</th>
+                            <th class="versionInfoC3">Detail(s)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>0.01 (first version)</td>
-                            <td>2025-10-19 1955</td>
-                            <td>initial version</td>
+                            <td class="versionInfoC1">0.01 (first version)</td>
+                            <td class="versionInfoC2">2025-10-19 1955</td>
+                            <td class="versionInfoC3">initial version</td>
                         </tr>
                         <tr>
-                            <td>0.02</td>
-                            <td>2025-10-20 1855</td>
-                            <td>storing version in stand-alone file</td>
+                            <td class="versionInfoC1">0.02</td>
+                            <td class="versionInfoC2">2025-10-20 1921</td>
+                            <td class="versionInfoC3">improved version handling + some command GUI work</td>
                         </tr>
                     </tbody>
                 </table>

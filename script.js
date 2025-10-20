@@ -5,6 +5,10 @@ function openMazeTab(tabName) {
     x[i].style.display = "none";
   }
   document.getElementById(tabName).style.display = "block";
+
+  if (tabName == 'versionInfo'){
+    refreshVersionHistory();
+  }
 }
 
 function toggleDisplay(eleId){
@@ -15,17 +19,20 @@ function toggleDisplay(eleId){
     }
 }
 
-// trivial change
-function displayAlert(message){
-    alert(`display-alert: ${message}`);
-}
+let versionHistory = {
 
-// trivial change
-function returnDoubleSelf(self){
-    return `${self}-${self}`;
-}
+};
+async function refreshVersionHistory(){
+    const url = 'https://dvjc-wm.github.io/versionInfo.txt';
+    try {
+        const response = await fetch(url);
+        if (!response.ok){
+            throw new Error(`Response status: ${response.status}`);
+        }
 
-// trivial change
-function a_b_c(d){
-    return d;
+        const result = await response.json();
+        console.log(result);
+    } catch (error) {
+        console.error(error.message);
+    }
 }

@@ -1,0 +1,14 @@
+[
+    {
+        id: 0,
+        version: '0.01 (first version)',
+        time: '2025-10-19 1955',
+        text: 'initial version'
+    },
+    {
+        id: 1,
+        version: '0.02',
+        time: '2025-10-20 1855',
+        text: 'storing version in stand-alone file'
+    }
+]

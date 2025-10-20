@@ -24,3 +24,8 @@ function displayAlert(message){
 function returnDoubleSelf(self){
     return `${self}-${self}`;
 }
+
+// trivial change
+function a_b_c(d){
+    return d;
+}

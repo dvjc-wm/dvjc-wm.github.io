@@ -36,3 +36,8 @@ async function refreshVersionHistory(){
         console.error(error.message);
     }
 }
+
+// triviality
+function hamburger(details){
+    alert('nope!');
+}

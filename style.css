@@ -1,3 +1,10 @@
+.versionInfoC1-header{
+    position: relative;
+    width: 10%;
+    padding-left: 2%;
+    text-align: center;
+}
+
 .versionInfoC1 {
     position: relative;
     width: 10%;

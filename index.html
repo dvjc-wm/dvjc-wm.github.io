@@ -20,10 +20,7 @@
                     </div>
                     <div style="display: inline-block; position: relative; width: 25%;">
                         Program
-                        <ol id="programmedCommands">
-                            <li>
-                                Start
-                            </li>
+                        <ol id="programmedCommands" style="position: absolute; display: block;">
                         </ol>
                     </div>
                     <div style="display: inline-block; position: relative; width: 25%;">
@@ -31,51 +28,60 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Category</th>
+                                    <th style="position: relative; width: 30%; text-align: left;">Category</th>
                                     <th>Command</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Movement</td>
+                                    <td></td><td></td>
+                                </tr>
+                                <tr style="width: 100%;">
+                                    <td style="position: relative; width: 50%">Movement</td>
                                     <td>
-                                        <input type="button" value="ROTATE LEFT" />
+                                        <input type="button" onclick="addCommand('ROTATE LEFT')" value="ROTATE LEFT" />
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Movement</td>
+                                <tr style="width: 100%;">
+                                    <td style="position: relative; width: 50%">Movement</td>
                                     <td>
-                                        <input type="button" value="ROTATE RIGHT" />
+                                        <input type="button" onclick="addCommand('ROTATE RIGHT')" value="ROTATE RIGHT" />
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Movement</td>
+                                <tr style="width: 100%;">
+                                    <td style="position: relative; width: 50%">Movement</td>
                                     <td>
-                                        <input type="button" value="MOVE FORWARD" />
+                                        <input type="button" onclick="addCommand('MOVE FORWARD')" value="MOVE FORWARD" />
+                                    </td>
+                                </tr>                                
+                                <tr>
+                                    <td></td><td></td>
+                                </tr>
+                                <tr style="width: 100%;">
+                                    <td style="position: relative; width: 50%">Control</td>
+                                    <td>
+                                        <input type="button" onclick="addCommand('Repeat X times')" value="Repeat X times" />
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Control</td>
+                                <tr style="width: 100%;">
+                                    <td style="position: relative; width: 50%">Control</td>
                                     <td>
-                                        <input type="button" value="Repeat X times" />
+                                        <input type="button" onclick="addCommand('IF')" value="IF" />
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Control</td>
+                                <tr style="width: 100%;">
+                                    <td style="position: relative; width: 50%;">Control</td>
                                     <td>
-                                        <input type="button" value="IF" />
+                                        <input type="button" onclick="addCommand('ELSE')" value="ELSE" />
                                     </td>
-                                </tr>
+                                </tr>                               
                                 <tr>
-                                    <td>Control</td>
-                                    <td>
-                                        <input type="button" value="ELSE" />
-                                    </td>
+                                    <td></td><td></td>
                                 </tr>
-                                <tr>
-                                    <td>Sensing</td>
+                                <tr style="width: 100%;">
+                                    <td style="position: relative; width: 50%">Sensing</td>
                                     <td>
-                                        <input type="button" value="DETECT WALL" />
+                                        <input type="button" onclick="addCommand('DETECT WALL')" value="DETECT WALL" />
                                     </td>
                                 </tr>
                             </tbody>

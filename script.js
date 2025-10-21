@@ -34,6 +34,7 @@ async function refreshVersionHistory(){
         
         let tableElement = document.getElementById('versionHistoryTable');
         if (!!tableElement){
+            tableElement.innerHtml = '';
             Object.keys(versionHistory).forEach( versionKey => {
                 let record = versionHistory[versionKey];
                 var tr = document.createElement("tr");
@@ -61,7 +62,22 @@ async function refreshVersionHistory(){
     }
 }
 
-// triviality
-function hamburger(details){
-    alert('nope!');
+function addCommand(command){
+    let programElement = document.getElementById("programmedCommands");
+    if (!!programElement){
+        let li = document.createElement("li");
+
+        let input = document.createElement("input");
+        input.setAttributeNS(null, "type","button");
+        input.setAttributeNS(null, "onclick",`removeCommand('${command}')`);
+        input.setAttributeNS(null, "value",command);
+
+        li.appendChild(input);
+
+        programElement.appendChild(li);
+    }
+}
+
+function removeCommand(command){
+    alert('not yet implemented ...');
 }

@@ -34,7 +34,12 @@ async function refreshVersionHistory(){
         
         let tableElement = document.getElementById('versionHistoryTable');
         if (!!tableElement){
-            tableElement.innerHtml = '';
+            // clear out old
+            var new_tbody = document.createElement("tbody");
+            new_tbody.setAttributeNS(null, 'id', versionHistoryTable);
+            tableElement.parentNode.replaceChild(new_tbody, tableElement);
+
+            // add new
             Object.keys(versionHistory).forEach( versionKey => {
                 let record = versionHistory[versionKey];
                 var tr = document.createElement("tr");

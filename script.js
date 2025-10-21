@@ -39,15 +39,15 @@ async function refreshVersionHistory(){
                 var tr = document.createElement("tr");
                 var td1 = document.createElement("td");
                 td1.classList = ['versionInfoC1'];
-                td1.createTextNode = record.version;
+                td1.innerText = record.version;
                 tr.appendChild(td1);
                 var td2 = document.createElement("td");
                 td2.classList = ['versionInfoC2'];
-                td2.createTextNode = record.time;
+                td2.innerText = record.time;
                 tr.appendChild(td2);
                 var td3 = document.createElement("td");
                 td3.classList = ['versionInfoC3'];
-                td3.createTextNode = record.text;
+                td3.innerText = record.text;
                 tr.appendChild(td3);
                 tableElement.appendChild(tr);
             });

@@ -1,3 +1,4 @@
+let previouslyRefreshedVersionHistory = false;
 function openMazeTab(tabName) {
   var i;
   var x = document.getElementsByClassName("mzTab");
@@ -6,7 +7,8 @@ function openMazeTab(tabName) {
   }
   document.getElementById(tabName).style.display = "block";
 
-  if (tabName == 'versionInfo'){
+  if (tabName == 'versionInfo' && !previouslyRefreshedVersionHistory){
+    previouslyRefreshedVersionHistory = !previouslyRefreshedVersionHistory;
     refreshVersionHistory();
   }
 }
@@ -34,10 +36,6 @@ async function refreshVersionHistory(){
         
         let tableElement = document.getElementById('versionHistoryTable');
         if (!!tableElement){
-            // clear out old
-            var new_tbody = document.createElement("tbody");
-            new_tbody.setAttributeNS(null, 'id', versionHistoryTable);
-            tableElement.parentNode.replaceChild(new_tbody, tableElement);
 
             // add new
             Object.keys(versionHistory).forEach( versionKey => {

@@ -17,6 +17,6 @@
     "3": {
         "version": "0.04",
         "time": "2025-10-22 1211",
-        "text": "generating maze (static)"
+        "text": "generating maze (static) + allow version info refresh"
     }
 }

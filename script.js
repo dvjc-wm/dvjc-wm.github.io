@@ -1,4 +1,3 @@
-let previouslyRefreshedVersionHistory = false;
 function openMazeTab(tabName) {
   var i;
   var x = document.getElementsByClassName("mzTab");
@@ -7,8 +6,7 @@ function openMazeTab(tabName) {
   }
   document.getElementById(tabName).style.display = "block";
 
-  if (tabName == 'versionInfo' && !previouslyRefreshedVersionHistory){
-    previouslyRefreshedVersionHistory = !previouslyRefreshedVersionHistory;
+  if (tabName == 'versionInfo'){
     refreshVersionHistory();
   }
 }
@@ -36,7 +34,7 @@ async function refreshVersionHistory(){
         
         let tableElement = document.getElementById('versionHistoryTable');
         if (!!tableElement){
-
+            tableElement.innerHTML = '';
             // add new
             Object.keys(versionHistory).forEach( versionKey => {
                 let record = versionHistory[versionKey];

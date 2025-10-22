@@ -13,5 +13,10 @@
         "version": "0.03",
         "time": "2025-10-21 2020",
         "text": "version info from external file + initial programming work"
+    },
+    "3": {
+        "version": "0.04",
+        "time": "2025-10-22 1211",
+        "text": "generating maze (static)"
     }
 }

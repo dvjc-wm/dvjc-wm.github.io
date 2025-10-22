@@ -16,7 +16,13 @@
                 <div style="border-bottom: 1px solid black; width: 75%;">Maze Bits</div>
                 <div>
                     <div style="display: inline-block; position: relative; width: 25%;">
-                        Maze
+                        <div id="mazeHeader" style="position: absolute; display: inline-block; width: 11em;">
+                            <div id="mazeLabel" style="position: relative; float: left">Maze</div>
+                            <div id="mazeLabel" style="position: relative; float: right">
+                                <input type="button" value="Generate" onclick="drawMazeBoard()" />
+                            </div>
+                        </div>
+                        <div id="mazeBoard" style="position: absolute; padding-top: 2em;"></div>
                     </div>
                     <div style="display: inline-block; position: relative; width: 25%;">
                         Program
@@ -170,6 +176,6 @@
                 </table>
             </div>
         </div>
-        <script type="text/javascript" src="./script.js?20251021.2020" ></script>
+        <script type="text/javascript" src="./script.js?20251022.1211" ></script>
     </body>
 </html>

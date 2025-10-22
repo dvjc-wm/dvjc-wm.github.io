@@ -1,25 +1,25 @@
 .versionInfoC1-header{
     position: relative;
-    width: 10%;
+    width: 15%;
     padding-left: 2%;
     text-align: center;
 }
 
 .versionInfoC1 {
     position: relative;
-    width: 10%;
+    width: 15%;
     padding-left: 2%;
     text-align: left;
 }
 
 .versionInfoC2 {
     position: relative;
-    width: 10%;
+    width: 20%;
     text-align: center;
 }
 
 .versionInfoC3 {
     position: relative;
-    width: 80%;
+    width: 65%;
     text-align: left;
 }

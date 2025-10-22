@@ -65,14 +65,37 @@ async function refreshVersionHistory(){
     }
 }
 
+function getNextIndex(){
+    let buttonIndex = '00';
+    let programElement = document.getElementById("programmedCommands");
+    if (!!programElement){
+        let current_count = programElement.children.length;
+        buttonIndex = ('00' + current_count).substring(('00' + current_count).length-2);
+        let buttonId = `button${buttonIndex}`;
+        while (!!document.getElementById(buttonId)){
+            current_count++;
+            buttonIndex = ('00' + current_count).substring(('00' + current_count).length-2);
+            buttonId = `button${buttonIndex}`;
+        }
+    }
+    return buttonIndex;
+}
+
 function addCommand(command){
     let programElement = document.getElementById("programmedCommands");
     if (!!programElement){
         let li = document.createElement("li");
 
         let input = document.createElement("input");
+        let buttonIndex = getNextIndex();
+        let buttonId = `button${buttonIndex}`;
+
+        let li_id = `listItem${buttonIndex}`;
+        li.setAttributeNS(null, "id", li_id);
+
+        input.setAttributeNS(null, "id", buttonId);
         input.setAttributeNS(null, "type","button");
-        input.setAttributeNS(null, "onclick",`removeCommand('${command}')`);
+        input.setAttributeNS(null, "onclick",`removeCommand('${li_id}')`);
         input.setAttributeNS(null, "value",command);
 
         li.appendChild(input);
@@ -81,6 +104,9 @@ function addCommand(command){
     }
 }
 
-function removeCommand(command){
-    alert('not yet implemented ...');
+function removeCommand(buttonId){
+    let li = document.getElementById(buttonId);
+    if (!!li){
+        li.parentNode.removeChild(li);
+    }
 }

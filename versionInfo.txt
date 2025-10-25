@@ -23,5 +23,10 @@
         "version": "0.05",
         "time": "2025-10-23 2359",
         "text": "added more command buttons"
+    },
+    "5": {
+        "version": "0.06",
+        "time": "2025-10-24 2358",
+        "text": "wired up repeat-count-request + began adding handling of nudging commands between REPEAT and WHILE-END"
     }
 }

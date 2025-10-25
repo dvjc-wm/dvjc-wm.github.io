@@ -82,6 +82,13 @@ function getNextIndex(){
 function addCommand(command){
     let programElement = document.getElementById("programmedCommands");
     if (!!programElement){
+        if (command == "REPEAT X TIMES"){
+            let possibleCount = prompt("Repetition frequency?", 1);
+            while (isNaN(possibleCount) || possibleCount < 0){
+                possibleCount = prompt("Repetition frequency?", 1);
+            }
+            command = `REPEAT ${possibleCount} TIMES`;
+        }
         let li = document.createElement("li");
 
         let input = document.createElement("input");
@@ -99,6 +106,37 @@ function addCommand(command){
         li.appendChild(input);
 
         programElement.appendChild(li);
+
+        // handle one {} :: while-end
+        let beginning = null;
+        let bumpables = [];
+        if (command == "WHILE-END"){
+            let forceExist = false;
+            let foundBeginning = false;
+            while (!foundBeginning && !forceExist){
+                let previousSibling = document.getElementById(buttonId).parentElement.previousSibling;
+                if (!!previousSibling){
+                    let previousButton = previousSibling.children[0];
+                    if (previousButton.value.startsWith("REPEAT")){
+                        foundBeginning = true;
+                        beginning = previousButton;
+                    }
+                    if (!foundBeginning){
+                        buttonId = previousSibling.id;
+                        if (buttonId.startsWith("listItem")){
+                            buttonId = previousSibling.childNodes[0].id;
+                            previousSibling = document.getElementById(buttonId);
+                        }
+                        bumpables.push(previousSibling);
+                    }
+                }
+                // need to handle running out of nodes to check
+            }
+            // we have bumpables - wrap the element
+            if (foundBeginning && bumpables.length > 0){
+                beginning.value = "nu";
+            }
+        }
     }
 }
 
